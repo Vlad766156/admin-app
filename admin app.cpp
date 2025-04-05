@@ -12,18 +12,18 @@ int main()
     if (years >= 18 and admin == "yes") {
         cout << "you can pass";
     }
-    else if (years < 18 and admin == "yes") {
-        cout << "you are admin but no adult";
-        cout << "you cant pass";
-    }
-    else if (years >= 18 and admin == "no") {
-        cout << "you are adult but no admin";
-    }
-    else if (years >= 18 and admin != "no" and admin != "yes") {
-        cout << "you dont have access beacose you are typing a invalid input";
-    }
-    else if (years < 18 and admin != "no" and admin != "yes") {
-        cout << "lil kid dont joke";
+    else {
+        if (years < 18) {
+            cout << "you are not adult";
+        }
+
+        if (admin == "no") {
+            cout << "you not admin";
+        }
+        else if (admin != "yes") {
+            cout << "invalid input try again";
+        }
+
     }
 }
 
