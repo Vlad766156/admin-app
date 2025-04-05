@@ -9,21 +9,22 @@ int main()
     cin >> years;
     cout << "are you admin?\n";
     cin >> admin;
-    if (years >= 18 and admin == "yes") {
-        cout << "you can pass";
+    bool is_admin = admin == "yes";
+    if (years >= 18 and is_admin) {
+        cout << "you can pass\n";
     }
     else {
+        cout << "access denied\n";
         if (years < 18) {
-            cout << "you are not adult";
+            cout << "you are not adult\n";
         }
 
         if (admin == "no") {
-            cout << "you not admin";
+            cout << "you not admin\n";
         }
         else if (admin != "yes") {
-            cout << "invalid input try again";
+            cout << "invalid input try again\n";
         }
-
     }
 }
 
